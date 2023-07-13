@@ -1,0 +1,144 @@
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--light-grey);
+}
+
+.main-container {
+  background-color: var(--white);
+  width: 800px;
+  border-radius: 1.2rem 1.2rem 11rem 1.2rem;
+  padding: 2rem;
+}
+
+form {
+  display: flex;
+  border-bottom: 1px solid var(--light-grey);
+  padding-bottom: 4rem;
+  margin-right: 8rem;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.date-input-container {
+  position: relative;
+}
+
+.date-input-container div:nth-child(1) {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: var(--smokey-grey);
+  font-size: 0.8rem;
+}
+
+input {
+  width: 9.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--light-grey);
+  color: var(--off-black);
+  margin-right: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  caret-color: var(--purple);
+  cursor: pointer;
+}
+
+input:active {
+  border: 1px solid var(--purple);
+}
+
+.invalidated-message {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.8rem;
+  color: var(--light-red);
+  position: absolute;
+  top: 105%;
+}
+
+.arrow-button {
+  background-color: var(--purple);
+  border-radius: 50%;
+  padding: 1rem;
+  width: 65px;
+  height: 65px;
+  top: 78%;
+  cursor: pointer;
+  position: absolute;
+  left: 95%;
+}
+
+.arrow-button:hover {
+  background-color: var(--off-black);
+}
+
+span {
+  letter-spacing: 0.2rem;
+  color: var(--purple);
+}
+
+.age-stat {
+  font-size: 4rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@media (max-width: 800px) {
+  .main-container {
+    width: 90vw;
+  }
+
+  form {
+    margin-right: 0;
+  }
+
+  .date-input-container div:nth-child(1) {
+    font-size: 0.7rem;
+  }
+
+  input {
+    width: 5.5rem;
+    font-size: 1.2rem;
+  }
+
+  .invalidated-message {
+    font-size: 0.7rem;
+  }
+  .arrow-button {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .age-stat {
+font-size: 3rem;
+}
+
+}
